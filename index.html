@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Blog preview card</title>
+  <style>
+    @font-face {
+      font-family: Figtree;
+      src: url('./assets/fonts/static/Figtree-SemiBold.ttf');
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: Figtree;
+      src: url('./assets/fonts/static/Figtree-ExtraBold.ttf');
+      font-weight: 800;
+    }
+    :root{
+      --yellow-color:hsl(47, 88%, 63%);
+      --white-color:hsl(0, 0%, 100%);
+      --black-color:hsl(0, 0%, 7%);
+      --grey-color:hsl(0, 0%, 50%);
+    }
+    *{
+      padding:0;
+      margin:0;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: "Figtree",sans-serif;
+      font-size: 16px;
+      background-color: var(--yellow-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card{
+      background-color: var(--white-color);
+      width: 400px;
+      padding:20px;
+      border-radius:15px;
+      border:2px solid var(--black-color);
+      display: flex;
+      flex-direction: column;
+      gap:15px;
+      box-shadow: 6px 6px 1px black;
+    }
+    .card .tag{
+      background-color: var(--yellow-color);
+      width: fit-content;
+      padding:5px 10px;
+      font-weight: 800;
+      border-radius: 5px;
+    }
+    img{
+      width: 100%;
+    }
+    .card .image img{
+      border-radius:10px;
+    }
+    .card p{
+      color:var(--grey-color)
+    }
+    .avatar{
+      display: flex;
+      gap:10px;
+      align-items: center;
+    }
+    .card h1{
+      transition: 0.3s;
+    }
+    .card h1:hover{
+      color:var(--yellow-color);
+      cursor: pointer;
+      caret-color: black;
+    }
+    .avatar-image{
+      width: 50px;
+    }
+    @media(max-width:400px){
+      .card{
+        max-width: 350px; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="image"><img src="assets/images/illustration-article.svg" alt="card-background"></div>
+    <div class="tag">Learning</div>
+    <div class="date">Published 21 Dec 2023</div>
+    <h1>HTML & CSS foundation</h1>
+    <p>These languages are the backbone of every website, defining structure, content, and presentation</p>
+    <div class="avatar">
+      <div class="avatar-image"><img src="assets/images/image-avatar.webp" alt="avatar"></div>
+      <h3 class="avatar-name">Greg Hooper</h3>
+    </div>
+  </div>
+</body>
+</html>
